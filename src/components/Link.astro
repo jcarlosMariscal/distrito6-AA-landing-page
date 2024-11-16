@@ -1,0 +1,21 @@
+---
+interface Props {
+  contained?:boolean;
+  href: string;
+}
+
+const { contained = false, href } = Astro.props;
+
+---
+
+<a 
+  class={`transition-transform rounded-xl duration-300 font-medium ${
+    contained
+      ? 'bg-blue-800 p-3 hover:bg-blue-900 text-white hover:scale-105'
+      : 'text-gray-900 hover:text-blue-800'
+  }`}
+  href={href}
+  target={href.startsWith('https') ? '_blank' : undefined}
+>
+  <slot />
+</a>

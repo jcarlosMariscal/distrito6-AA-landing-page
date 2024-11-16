@@ -1,0 +1,23 @@
+---
+type grupoProps = {
+  nombre: string;
+  fundacion: string;
+  domicilio: string;
+  sesiona: string;
+  horario: string;
+  miembroComite?: string;
+  cel?: string
+}
+
+const { nombre, fundacion, domicilio, sesiona, horario, miembroComite, cel } = Astro.props;
+---
+
+<div class="text-gray-900 shadow-lg p-4 rounded-xl">
+  <p class="font-bold mb-1">{nombre}</p>
+  <p><span class="font-medium">Fundación: </span>{fundacion}</p>
+  <p><span class="font-medium">Domicilio: </span>{domicilio}</p>
+  <p><span class="font-medium">Sesiona: </span>{sesiona}</p>
+  <p><span class="font-medium">Horario: </span>{horario}</p>
+  {miembroComite && <p><span class="font-medium">Miembro de Comité: </span>{miembroComite}</p>}
+  {cel && <p><span class="font-medium">Cel: </span>{cel}</p>}
+</div>

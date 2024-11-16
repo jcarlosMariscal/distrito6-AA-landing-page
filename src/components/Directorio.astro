@@ -1,0 +1,75 @@
+---
+import GrupoInfo from "./GrupoInfo.astro"
+
+
+const grupos = [
+  {
+    nombre: 'DISTRITO 6',
+    fundacion: '01/01/1982',
+    domicilio: 'Quinta de Daniel González No. 1111 Col. Moctezuma C.P. 75740 Tehuacán, Puebla.',
+    sesiona: 'Martes',
+    horario: '19:30hrs.',
+    miembroComite: 'Julio M.',
+    cel: '2381042885',
+  },
+  {
+    nombre: '6 de Agosto',
+    fundacion: '06/08/2007',
+    domicilio: '14 oriente esq. con la Colonia: Guadalupe C.P. 75730 Tehuacán, Puebla. Referencia a una cuadra de la iglesia de',
+    sesiona: 'Lunes a Sábado',
+    horario: '20:00hrs.',
+  },
+  {
+    nombre: 'Realidad de la Vida',
+    fundacion: '16/09/1983',
+    domicilio: 'Av. nacional No. 1601 Colonia: barrio san José C.P. 75820 Santiago Miahuatlán Puebla. Referencia frente al rey del cabrito',
+    sesiona: 'Lunes a Sábado',
+    horario: '20:30hrs.',
+  },
+  {
+    nombre: 'Jóvenes',
+    fundacion: '24/06/1987',
+    domicilio: 'Calle observatorio No. Colonia: estrella del sur. C.P. 75790 Tehuacán, Puebla. Referencia en contra esquina de la secundaria mártires de cananea.',
+    sesiona: 'Lunes a Sábado',
+    horario: '20:30hrs.',
+  },
+  {
+    nombre: 'Una Acción del Corazón',
+    fundacion: '16/06/2008',
+    domicilio: '7 poniente No. 111 Colonia: barrio san Miguel C.P. 75820 Santiago Miahuatlán Puebla. Referencia a 100 metros de Pablo Neruda.',
+    sesiona: 'Lunes a Sábado',
+    horario: '20:30hrs.',
+  },
+  {
+    nombre: '6 de Enero',
+    fundacion: '06/01/1980',
+    domicilio: '11 sur No. 528 Colonia: La Purísima C.P. 75784 Tehuacán, Puebla. Referencia entre Josefa O. de Dominguez',
+    sesiona: 'Lunes a Sábado',
+    horario: '20:30hrs.',
+  },
+  {
+    nombre: 'Puerto Seguro',
+    fundacion: '16/04/2003',
+    domicilio: '11 sur No. 304 Colonia: La Purísima 75784 Tehuacán, Puebla. Referencia entre 3 oriente y 5 oriente.',
+    sesiona: 'Lunes a Sábado',
+    horario: '14:30 y 20:00hrs.',
+  },
+  {
+    nombre: 'Nuevos Horizontes',
+    fundacion: '02/11/2009',
+    domicilio: '11 Norte No.447 Colonia: San Pedro Acoquiaco C.P. 75740 Tehuacán, Puebla. Referencia contra esquina del OXXO.',
+    sesiona: 'Lunes a Sábado',
+    horario: '20:00hrs.',
+  }
+]
+---
+
+<div class='mt-8' id='directorio'>
+  <div class='flex justify-center flex-col items-center'>
+    <h3 class="text-xl text-gray-900 font-medium">Directorio de Grupos Distrito 6</h3>
+    <p class="text-gray-600 font-medium">Tehuacán, Puebla.</p>
+  </div>
+  <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-12 my-8">
+    {grupos.map(grupo => <GrupoInfo nombre={grupo.nombre} fundacion={grupo.fundacion} domicilio={grupo.domicilio} sesiona={grupo.sesiona} horario={grupo.horario} miembroComite={grupo.miembroComite} cel={grupo.cel} />)}
+  </div>
+</div>
